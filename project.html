@@ -1,0 +1,67 @@
+<html>
+
+<head>
+	<title>Мой проект</title>
+</head>
+
+<body background="back.png">
+	<font color="cornsilk" size="5">
+		<div align="center">
+			<h1>Моя любимая игра</h1>
+			<h3>Minecraft</h3>
+			<img src="steve.jpg" alt="" width="500px">
+			<p>Minecraft (от англ. mine — «шахта», «добывать» и англ. craft — «ремесло»)
+				— компьютерная инди-игра в жанре песочницы с элементами симулятора выживания
+				и открытым миром, разработанная шведским программистом Маркусом Перссоном,
+				известным также как «Notch» (Нотч), и позже выпускаемая основанной им компанией Mojang.
+				Перссон занимался разработкой Minecraft с 2009 года. Портированием и поддержкой
+				версий игры для игровых консолей занималась британская компания 4J Studios.
+				В 2014 году компания Mojang и права на Minecraft были приобретены американской компанией
+				Microsoft.</p>
+			<button onclick="quiz()" style="width: 400px; 
+height: 100px; 
+background-color: rgb(2, 58, 2); 
+font-size: 24px; 
+font-weight: bold; 
+color: rgb(235, 255, 255);">Насколько хорошо ты знаешь игру Minecraft?</button>
+			<h6>Lev Orlov 2026</h6>
+		</div>
+	</font>
+</body>
+ <script>
+        function quiz() {
+            var questions = [
+                {
+                    question: "В каком году была создана игра Minecraft?\n(a) 2007\n(b) 2009\n(c) 2012",
+                    answer: "b"
+                },
+                {
+                    question: "Что делает верстак?\n(a) Крафтит предметы\n(b) Жарит еду n\(c) Хранит предметы",
+                    answer: "a"
+                },
+                {
+                    question: "Чего бояться криперы?\n(a) Собак\n(b) Котов\n(c) Куриц",
+                    answer: "b"
+                }, {
+                    question: "Зачем нужны элитры?\n(a) Чтобы летать\n(b) Чтобы быстрее плавать\n(c) Чтобы монстры не наносили урон",
+                    answer: "a"
+                }
+
+
+
+
+            ];
+            let score = 0;
+            for (let i = 0; i < questions.length; i++) {
+                var response = prompt(questions[i].question);
+                if (response == questions[i].answer) {
+                    score++;
+                    alert("Верно!");
+                } else {
+                    alert("Неверно!");
+                }
+            }
+            alert("Счет: " + score + "/" + questions.length);
+        }
+		</script>
+</html>
